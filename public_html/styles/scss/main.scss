@@ -26,12 +26,14 @@ body{font-family: 'montserrat-m', serif}
 .c-main{color: var(--color)}
 .h-100d{height:100%}
 .dis-f{display: flex}
+.f-wrap-w{flex-wrap: wrap}
 .al-it-c{align-items: center}
 .al-it-e{align-items: end}
 .al-it-st{align-items: stretch}
 .jus-c-c{justify-content: center}
 .jus-c-sa{justify-content: space-around}
 .jus-c-sb{justify-content: space-between}
+.jus-c-se{justify-content: space-evenly}
 .flex-d-c{flex-direction: column}
 .transition{transition: all 0.3s}
 .top-50d{top: 50%;transform: translate(0,-50%);}
@@ -50,12 +52,6 @@ body{
 
   #top > div {
     &> div{
-      img{
-        mask-image: url("/images/img_place.png");
-        mask-position: center center;
-        mask-size: cover;
-        mask-repeat: round;
-      }
       & > div:nth-child(1){
         padding-left: 80px;
         h1{
@@ -72,7 +68,14 @@ body{
         }
       }
       & > div:nth-child(2){
-        padding-right: 80px;
+        img{
+          padding-right: 80px;
+          //mask-image: url("/images/img_place.png");
+          //mask-position: center center;
+          //mask-size: cover;
+          //mask-repeat: round;
+          max-height: 100%;
+        }
       }
     }
     &> footer {
@@ -95,5 +98,44 @@ body{
         }
       }
     }
+  }
+}
+@media screen and (max-width:1290px){
+  body #top > div > div > div:nth-child(1) h1 {
+    font-size: 50px;
+  }
+  body #top > div > div > div:nth-child(1) h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width:1130px){
+  body #top > div > div > div:nth-child(1) h1 {
+    font-size: 40px;
+  }
+  body #top > div > div > div:nth-child(1) h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:970px){
+  body #top > div > div > div:nth-child(1) {
+    padding: 0 80px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    z-index: 1;
+    text-align: right;
+  }
+  body #top > div > div > div:nth-child(2) img {
+    padding-right: 0;
+  }
+  .all-top-img{
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
   }
 }

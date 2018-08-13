@@ -37,6 +37,9 @@ body {
 .dis-f {
   display: flex; }
 
+.f-wrap-w {
+  flex-wrap: wrap; }
+
 .al-it-c {
   align-items: center; }
 
@@ -54,6 +57,9 @@ body {
 
 .jus-c-sb {
   justify-content: space-between; }
+
+.jus-c-se {
+  justify-content: space-evenly; }
 
 .flex-d-c {
   flex-direction: column; }
@@ -78,11 +84,6 @@ body > header {
   padding: 35px 0 0 35px; }
   body > header a:hover {
     color: #000; }
-body #top > div > div img {
-  mask-image: url("/images/img_place.png");
-  mask-position: center center;
-  mask-size: cover;
-  mask-repeat: round; }
 body #top > div > div > div:nth-child(1) {
   padding-left: 80px; }
   body #top > div > div > div:nth-child(1) h1 {
@@ -94,8 +95,9 @@ body #top > div > div > div:nth-child(1) {
     padding: 20px 40px;
     border-radius: 30px;
     box-shadow: 0 3px 10px -5px #000000; }
-body #top > div > div > div:nth-child(2) {
-  padding-right: 80px; }
+body #top > div > div > div:nth-child(2) img {
+  padding-right: 80px;
+  max-height: 100%; }
 body #top > div > footer {
   padding: 0 30px 30px 0; }
   body #top > div > footer a:first-child:after {
@@ -109,5 +111,39 @@ body #top > div > footer {
     background: var(--color); }
   body #top > div > footer a:hover {
     color: #000; }
+
+@media screen and (max-width: 1290px) {
+  body #top > div > div > div:nth-child(1) h1 {
+    font-size: 50px; }
+
+  body #top > div > div > div:nth-child(1) h2 {
+    font-size: 30px; } }
+@media screen and (max-width: 1130px) {
+  body #top > div > div > div:nth-child(1) h1 {
+    font-size: 40px; }
+
+  body #top > div > div > div:nth-child(1) h2 {
+    font-size: 20px; } }
+@media screen and (max-width: 970px) {
+  body #top > div > div > div:nth-child(1) {
+    padding: 0 80px 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    z-index: 1;
+    text-align: right; }
+
+  body #top > div > div > div:nth-child(2) img {
+    padding-right: 0; }
+
+  .all-top-img {
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
