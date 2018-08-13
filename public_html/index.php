@@ -20,9 +20,9 @@
 </header>
 
 <section id="top" class="-bx-s-b -p-3 -h-100">
-    <div class="-b-c-eee h-100d dis-f flex-d-c jus-c-sb">
-        <div class="dis-f jus-c-sb h-100d">
-            <div class="-w-12 dis-f flex-d-c jus-c-sa">
+    <div class="-b-c-eee h-100d dis-f flex-d-c jus-c-sb -ovf-h">
+        <div class="dis-f jus-c-sb -pos-r h-100d">
+            <div class="-w-12 -w4-11 dis-f flex-d-c jus-c-se">
                 <div class="">
                     <h1 class="fnt-montserrat-b -pb-3">Artist Painter</h1>
                     <h2 class="">Shadi Rahiminik</h2>
@@ -31,8 +31,13 @@
                     <a class="-c-white" href="#">Go To my painting</a>
                 </div>
             </div>
-            <div class="-w-12 -t-al-c dis-f al-it-c">
-                <img class="top-img" src="/uploads/images/1.jpg" alt="">
+            <div class="all-top-img -pos-r -w-12 -w4-11">
+                <img class="top-img -bx-s-b -pos-a center-center" src="/uploads/images/top_img/4.png" alt="">
+                <img class="top-img -bx-s-b -pos-a center-center -dis-n" src="/uploads/images/top_img/3.png" alt="">
+                <img class="top-img -bx-s-b -pos-a center-center -dis-n" src="/uploads/images/top_img/5.png" alt="">
+                <img class="top-img -bx-s-b -pos-a center-center -dis-n" src="/uploads/images/top_img/1.png" alt="">
+                <img class="top-img -bx-s-b -pos-a center-center -dis-n" src="/uploads/images/top_img/6.png" alt="">
+                <img class="top-img -bx-s-b -pos-a center-center -dis-n" src="/uploads/images/top_img/2.png" alt="">
             </div>
         </div>
         <footer class="-t-al-r c-main -pos-f -bottom-0 -left-0 -w-11 -bx-s-b">
