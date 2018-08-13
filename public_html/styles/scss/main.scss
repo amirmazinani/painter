@@ -1,0 +1,99 @@
+button{
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+a{display: inline-block;}
+@font-face {
+  font-family: "montserrat-m";
+  src: url("/fonts/montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "montserrat-b";
+  src: url("/fonts/montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+}
+.fnt-montserrat-m{
+  font-family: 'montserrat-m', serif;
+}
+.fnt-montserrat-b{
+  font-family: 'montserrat-b', serif;
+}
+:root{
+  --color:#cccccc;
+}
+body{font-family: 'montserrat-m', serif}
+.-h-100{height: 100vh;min-height: 100vh}
+.c-main{color: var(--color)}
+.h-100d{height:100%}
+.dis-f{display: flex}
+.al-it-c{align-items: center}
+.al-it-e{align-items: end}
+.al-it-st{align-items: stretch}
+.jus-c-c{justify-content: center}
+.jus-c-sa{justify-content: space-around}
+.jus-c-sb{justify-content: space-between}
+.flex-d-c{flex-direction: column}
+.transition{transition: all 0.3s}
+.top-50d{top: 50%;transform: translate(0,-50%);}
+.left-50d{left: 50%;transform: translate(-50%,0);}
+.center-center{top: 50%;left: 50%;transform: translate(-50%,-50%)}
+
+
+
+body{
+  &> header{
+    padding: 35px 0 0 35px;
+    a:hover{
+      color: #000;
+    }
+  }
+
+  #top > div {
+    &> div{
+      img{
+        mask-image: url("/images/img_place.png");
+        mask-position: center center;
+        mask-size: cover;
+        mask-repeat: round;
+      }
+      & > div:nth-child(1){
+        padding-left: 80px;
+        h1{
+          font-size: 70px;
+        }
+        h2{
+          font-size: 50px;
+        }
+        a{
+          background: #ff3388;
+          padding: 20px 40px;
+          border-radius: 30px;
+          box-shadow: 0 3px 10px -5px #000000;
+        }
+      }
+      & > div:nth-child(2){
+        padding-right: 80px;
+      }
+    }
+    &> footer {
+      padding: 0 30px 30px 0;
+      a{
+        &:first-child{
+          &:after {
+            position: absolute;
+            content: '';
+            right: calc(100% + 20px);
+            top: 50%;
+            transform: translate(0, -50%);
+            height: 3px;
+            width: 200%;
+            background: var(--color);
+          }
+        }
+        &:hover{
+          color: #000;
+        }
+      }
+    }
+  }
+}
