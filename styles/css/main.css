@@ -92,6 +92,7 @@ body {
   transform: translate(-50%, -50%); }
 
 body > header {
+  z-index: 2;
   padding: 35px 0 0 35px; }
   body > header a:hover {
     color: #000; }
@@ -110,7 +111,8 @@ body #top > div > div > div:nth-child(2) img {
   padding-right: 80px;
   max-height: 100%; }
 body #top > div > footer {
-  padding: 0 30px 30px 0; }
+  padding: 0 30px 30px 0;
+  z-index: 1; }
   body #top > div > footer a:first-child:after {
     position: absolute;
     content: '';
@@ -156,5 +158,18 @@ body #top > div > footer {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%; } }
+@media screen and (max-width: 490px) {
+  body #top > div > div > div:nth-child(1) h1 {
+    font-size: 30px; }
+
+  body #top > div > div > div:nth-child(1) h2 {
+    font-size: 20px; }
+
+  body #top > div > div > div:nth-child(1) a {
+    font-size: 12px;
+    padding: 10px 35px; }
+
+  body #top > div > div > div:nth-child(1) {
+    padding: 0 45px 0 0; } }
 
 /*# sourceMappingURL=main.css.map */

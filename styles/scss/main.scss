@@ -44,6 +44,7 @@ body{font-family: 'montserrat-m', serif}
 
 body{
   &> header{
+    z-index: 2;
     padding: 35px 0 0 35px;
     a:hover{
       color: #000;
@@ -80,6 +81,7 @@ body{
     }
     &> footer {
       padding: 0 30px 30px 0;
+      z-index: 1;
       a{
         &:first-child{
           &:after {
@@ -137,5 +139,20 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     height: 100%;
+  }
+}
+@media screen and (max-width:490px){
+  body #top > div > div > div:nth-child(1) h1 {
+    font-size: 30px;
+  }
+  body #top > div > div > div:nth-child(1) h2 {
+    font-size: 20px;
+  }
+  body #top > div > div > div:nth-child(1) a {
+    font-size: 12px;
+    padding: 10px 35px;
+  }
+  body #top > div > div > div:nth-child(1) {
+    padding: 0 45px 0 0;
   }
 }
