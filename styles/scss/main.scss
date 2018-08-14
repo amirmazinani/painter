@@ -25,16 +25,16 @@ body{font-family: 'montserrat-m', serif}
 .-h-100{height: 100vh;min-height: 100vh}
 .c-main{color: var(--color)}
 .h-100d{height:100%}
-.dis-f{display: flex}
-.f-wrap-w{flex-wrap: wrap}
-.al-it-c{align-items: center}
-.al-it-e{align-items: end}
-.al-it-st{align-items: stretch}
-.jus-c-c{justify-content: center}
-.jus-c-sa{justify-content: space-around}
-.jus-c-sb{justify-content: space-between}
-.jus-c-se{justify-content: space-evenly}
-.flex-d-c{flex-direction: column}
+.dis-f{display: flex;display:-moz-flex;display: -webkit-flex;}
+.f-wrap-w{flex-wrap: wrap;-webkit-flex-wrap: wrap;}
+.al-it-c{align-items: center;-webkit-align-items: center;}
+.al-it-e{align-items: end;-webkit-align-items: flex-end;}
+.al-it-st{align-items: stretch;-webkit-align-items: stretch;}
+.jus-c-c{justify-content: center;-webkit-justify-content: center;}
+.jus-c-sa{justify-content: space-around;-webkit-justify-content: space-around;}
+.jus-c-sb{justify-content: space-between;-webkit-justify-content: space-between;}
+.jus-c-se{justify-content: space-evenly;-webkit-justify-content: space-between;}
+.flex-d-c{flex-direction: column;-webkit-flex-direction: column;}
 .transition{transition: all 0.3s}
 .top-50d{top: 50%;transform: translate(0,-50%);}
 .left-50d{left: 50%;transform: translate(-50%,0);}
