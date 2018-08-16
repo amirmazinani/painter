@@ -46,8 +46,7 @@ $(function () {
                 $(window).scrollTop(topOffset);
             }else{
                 $('.item').removeClass('open');
-                $('.item > div > i').removeClass('-fnt-icon-cancel');
-                $('.item > div > i').addClass('-fnt-icon-plus');
+                $('.item > div > p > i').removeClass('-fnt-icon-cancel').addClass('-fnt-icon-plus');
                 $(this).closest('.item').addClass('open');
                 $(this).find('i').toggleClass('-fnt-icon-plus -fnt-icon-cancel');
                 let topOffset = $(this).closest('.item').offset().top;
