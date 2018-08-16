@@ -22,12 +22,12 @@ $(function () {
         for(let i = 1 ; i <= 19 ; i++){
             let item =
                 `<div class="item">
-                    <div class="-pos-r -cur-point -brd-r-3 -ovf-h">
+                    <div class="-pos-r before-show -cur-point -brd-r-3 -ovf-h transition">
                         <p class="transition -pos-a -top-0 -right-0 -c-black -m-3 dis-f flex-d-rw al-it-c">
                             <i class="-fnt-icon-plus transition -dis-ib -brd-r-c sqr -t-al-c -b-c-white"></i>
                             <span class="-fnt-s-p transition -dis-ib -pr-1">click to zoom</span>
                         </p>
-                        <img class="-w-11 -brd-r-3" src="/uploads/images/portfolios/${i}.jpg" alt="painting number ${i}">
+                        <img class="-w-11 -dis-b -brd-r-3" src="/uploads/images/portfolios/${i}.jpg" alt="painting number ${i}">
                     </div>
                 </div>`;
 
@@ -59,5 +59,24 @@ $(function () {
             let topOffset = $(this).closest('.item').offset().top;
             $(window).scrollTop(topOffset);
         }
+    });
+
+    //show by scroll
+    function show() {
+        let itemTop = $(this).parent().offset().top;
+        let winBottom = Number($(window).scrollTop() + $(window).height());
+        console.log('item :'+itemTop);
+        console.log('win bot :'+winBottom);
+        console.log('win sc :'+$(window).scrollTop());
+        console.log('win he :'+$(window).innerHeight());
+        if(itemTop < winBottom){
+            $(this).removeClass('before-show');
+        }
+    }
+    $('.before-show').each(show);
+
+    //run function by scroll
+    $(window).on("scroll", function() {
+        $('.before-show').each(show);
     });
 });

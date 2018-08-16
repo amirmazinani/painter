@@ -104,6 +104,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.before-show {
+  -webkit-transform: translateY(200%);
+  -moz-transform: translateY(200%);
+  transform: translateY(200%); }
+
 body > header {
   z-index: 2;
   padding: 35px 0 0 35px; }
@@ -141,6 +146,8 @@ body #portfolios .item {
   max-width: 300px;
   text-align: center;
   padding: 50px; }
+  body #portfolios .item .transition {
+    transition: all 0.5s; }
   body #portfolios .item.open {
     max-width: 100%; }
   body #portfolios .item.big_open {
@@ -163,6 +170,7 @@ body #portfolios .item {
       width: 100%;
       text-align: center; }
       body #portfolios .item.big_open > div > img {
+        display: block;
         max-width: 100%;
         max-height: calc(100vh - 40px);
         width: auto; }

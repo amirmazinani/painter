@@ -42,6 +42,7 @@ body{font-family: 'montserrat-m', serif}
 .top-50d{top: 50%;transform: translate(0,-50%);}
 .left-50d{left: 50%;transform: translate(-50%,0);}
 .center-center{top: 50%;left: 50%;transform: translate(-50%,-50%)}
+.before-show{-webkit-transform: translateY(200%);-moz-transform: translateY(200%);transform: translateY(200%);}
 
 
 
@@ -110,6 +111,9 @@ body{
       max-width: 300px;
       text-align: center;
       padding: 50px;
+      .transition{
+        transition: all 0.5s;
+      }
       &.open{
         max-width: 100%;
       }
@@ -133,6 +137,7 @@ body{
           width: 100%;
           text-align: center;
           &> img{
+            display: block;
             max-width: 100%;
             max-height: calc(100vh - 40px);
             width: auto;
