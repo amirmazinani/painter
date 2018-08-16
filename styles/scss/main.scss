@@ -35,6 +35,7 @@ body{font-family: 'montserrat-m', serif}
 .jus-c-sb{justify-content: space-between;-webkit-justify-content: space-between;}
 .jus-c-se{justify-content: space-evenly;-webkit-justify-content: space-around;}
 .flex-d-c{flex-direction: column;-webkit-flex-direction: column;}
+.flex-w-w{flex-wrap: wrap;-webkit-flex-wrap: wrap;}
 .transition{transition: all 0.3s}
 .top-50d{top: 50%;transform: translate(0,-50%);}
 .left-50d{left: 50%;transform: translate(-50%,0);}
@@ -101,7 +102,24 @@ body{
       }
     }
   }
+
+  #portfolios{
+    .item{
+      max-width: 300px;
+      &.open{
+        max-width: 100%;
+      }
+      img{
+        box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08);
+      }
+    }
+  }
 }
+
+
+
+
+
 @media screen and (max-width:1290px){
   body #top > div > div > div:nth-child(1) h1 {
     font-size: 50px;
