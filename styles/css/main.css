@@ -34,6 +34,11 @@ body {
 .h-100d {
   height: 100%; }
 
+.sqr {
+  height: 30px;
+  width: 30px;
+  line-height: 30px; }
+
 .dis-f {
   display: flex;
   display: -moz-flex;
@@ -74,6 +79,10 @@ body {
 .flex-d-c {
   flex-direction: column;
   -webkit-flex-direction: column; }
+
+.flex-d-rw {
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse; }
 
 .flex-w-w {
   flex-wrap: wrap;
@@ -129,11 +138,53 @@ body #top > div > footer {
   body #top > div > footer a:hover {
     color: #000; }
 body #portfolios .item {
-  max-width: 300px; }
+  max-width: 300px;
+  text-align: center;
+  padding: 50px; }
   body #portfolios .item.open {
     max-width: 100%; }
-  body #portfolios .item img {
+  body #portfolios .item.big_open {
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 3;
+    max-width: 100%;
+    overflow: hidden;
+    height: 100vh; }
+    body #portfolios .item.big_open > div {
+      box-sizing: border-box;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      body #portfolios .item.big_open > div > img {
+        max-width: 100%;
+        max-height: calc(100vh - 40px);
+        width: auto; }
+  body #portfolios .item > div {
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08); }
+    body #portfolios .item > div p > i {
+      visibility: hidden;
+      opacity: 0; }
+    body #portfolios .item > div p > span {
+      visibility: hidden;
+      opacity: 0; }
+    body #portfolios .item > div:hover {
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15), 0 5px 15px 0 rgba(0, 0, 0, 0.13); }
+    body #portfolios .item > div:hover > p > i {
+      visibility: visible;
+      opacity: 1; }
+      body #portfolios .item > div:hover > p > i:hover {
+        background: black;
+        color: #fff; }
+        body #portfolios .item > div:hover > p > i:hover + span {
+          visibility: visible;
+          opacity: 1; }
 
 @media screen and (max-width: 1290px) {
   body #top > div > div > div:nth-child(1) h1 {
