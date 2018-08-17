@@ -22,7 +22,7 @@ $(function () {
         for(let i = 1 ; i <= 19 ; i++){
             let item =
                 `<div class="item">
-                    <div class="-pos-r before-show -cur-point -brd-r-3 -ovf-h transition">
+                    <div class="-pos-r before-show  -dis-n -cur-point -brd-r-3 -ovf-h transition">
                         <p class="transition -pos-a -top-0 -right-0 -c-black -m-3 dis-f flex-d-rw al-it-c">
                             <i class="-fnt-icon-plus transition -dis-ib -brd-r-c sqr -t-al-c -b-c-white"></i>
                             <span class="-fnt-s-p transition -dis-ib -pr-1">click to zoom</span>
@@ -69,6 +69,9 @@ $(function () {
         console.log('win bot :'+winBottom);
         console.log('win sc :'+$(window).scrollTop());
         console.log('win he :'+$(window).innerHeight());
+        if(itemTop < winBottom + 100){
+            $(this).removeClass('-dis-n');
+        }
         if(itemTop < winBottom){
             $(this).removeClass('before-show');
         }
